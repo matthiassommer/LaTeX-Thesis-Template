@@ -1,0 +1,47 @@
+\documentclass[english, openany, 11pt, twoside, headsepline, numbers=noenddot, chapterprefix=true, parskip=half-, final]{scrbook}
+
+\include{Befehle}
+
+\begin{document}
+	
+	
+%------------
+\frontmatter 
+
+\include{Cover}
+\include{Abstract}
+\tableofcontents
+
+
+%------------
+\mainmatter
+
+\pagestyle{scrheadings} 
+\include{Introduction}
+
+\part{Overview}
+\include{Topic 1}
+
+
+\part{Contributions}
+\include{Topic 2}
+
+
+\include{Conclusion}
+
+
+%------------
+\appendix
+\listoffigures
+\listoftables
+\include{Appendix}
+\include{acronyms}
+
+
+%------------
+\backmatter
+{\footnotesize \bibliographystyle{alpha} \bibliography{literature}}
+
+%\include{Lebenslauf}
+
+\end{document}

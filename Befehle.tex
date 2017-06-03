@@ -1,0 +1,80 @@
+%-------- Footer and header
+\usepackage{scrpage2}
+\ohead[]{\headmark}
+
+\usepackage[left=2.25cm, right=2.25cm, top=2cm, bottom=2.5cm, bindingoffset=.5cm, includefoot, includehead]{geometry}
+
+%--------- Schriftsatz
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern, charter}
+\usepackage[expert]{mathdesign}
+\usepackage[english]{babel}
+\usepackage{babelbib, ellipsis}
+
+
+%--------- Inhaltsverteilung
+\raggedbottom
+
+% Position und Größe der Fußnoten
+\deffootnote[0.6em]{0em}{0em}{\textsuperscript{\thefootnotemark\ }}
+% Mindestfüllgrad einer Seite mit einem Gleitobjekt
+\renewcommand{\floatpagefraction}{0.7}
+% Maximale Größe eines Gleitobjekts am unteren Seitenrand
+\renewcommand{\topfraction}{0.8}
+% Maximale Größe eines Gleitobjekts am oberen Seitenrand
+\renewcommand{\bottomfraction}{0.8}
+% mögliche Abstandsvergrößerung innerhalb einer Zeile bei unschönem Zeilenumbruch
+\setlength{\emergencystretch}{4pt}
+% Mindestanteil an Text auf einer Seite mit Gleitobjekt
+\renewcommand{\textfraction}{0.1}
+
+\clubpenalty = 10000 % Schusterjungen (einzelne Zeile unten auf der Seite) unterdrücken
+\widowpenalty = 10000 % Hurenkinder (einzelne Zeile oben auf der Seite) unterdrücken
+\displaywidowpenalty = 10000
+
+
+%--------- Mathe
+\usepackage{amssymb, nicefrac}
+\usepackage[cmex10]{amsmath}
+\interdisplaylinepenalty=2500
+
+\usepackage[linesnumbered,ruled]{algorithm2e}
+
+
+%--------- Other
+\usepackage{setspace}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+\usepackage{todonotes, acronym}
+\usepackage{epigraph}
+
+%--------- Grafiken
+\usepackage{graphicx, subfig}
+\usepackage{caption}
+\captionsetup{labelfont=bf,font={small}}
+
+
+%--------- Tabellen
+\usepackage{booktabs, longtable, multirow, pdflscape}
+\usepackage[nottoc]{tocbibind}
+
+
+%--------- Überschriften
+\setkomafont{part}{\normalfont}
+\setkomafont{chapterprefix}{\huge}
+\setkomafont{chapter}{\normalfont\huge}
+
+
+\usepackage{titlesec}
+\titleformat{\section}[hang]{\usefont{T1}{bch}{b}{n}\selectfont} % "bch" - Bitstream Charter, "b" - bold
+{} % label
+{0em} % horizontal separation between label and title body
+{\hspace{-0.4pt}\Large \thesection\hspace{0.6em}} % code preceding the title
+[] % optional code following the title body
+
+\titleformat{\subsection}[hang]{\usefont{T1}{bch}{b}{n}\selectfont}{}{0em}{\hspace{-0.4pt}\large \thesubsection\hspace{0.6em}}[]
+\titleformat{\subsubsection}[hang]{\usefont{T1}{bch}{b}{n}\selectfont}{}{0em}{}[]
+
+\pdfminorversion=7
+\pdfsuppresswarningpagegroup=1
